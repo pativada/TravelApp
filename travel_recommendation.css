@@ -1,0 +1,226 @@
+body{
+    background-image: url('./images/opera.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+nav {
+    background-color: currentColor;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  nav ul {
+    list-style-type: none;
+    /* padding: 0; */
+  }
+  nav ul li {
+    display:inline-flex;
+    margin-right: 10px;
+  }
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+    h1 {
+    margin-bottom: 10px;
+    color: whitesmoke;
+    background-color: burlywood;
+    width: 300px;
+  }
+ 
+  #tbloom {
+    background-color:transparent ;
+    align-items: center;
+  }
+    #explore {
+        margin-left: 10px;
+  }
+      #dream {
+        margin-left: 20px;
+  }
+        #dest {
+        margin-left: 30px;
+  }
+  
+#socialmed-icons {
+    margin-left: 10px;
+    width:30px;
+    height: 120px;
+    border: red;
+    color: transparent;
+}
+#socialmed-icons1 {
+    margin-left: 10px;
+    margin-top: 150px;
+    width:30px;
+    height: 120px;
+    border: red;
+    color: transparent;
+}
+#terr {
+    margin-left: 100px;
+    margin-top: 0;
+    width:250px;
+    height: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: transparent;
+    font-size: smaller;
+    color: white;  
+}
+#h1-aboutus {
+  background-color: transparent;
+  color:white;
+  width:100%;
+  text-align: center;
+}
+#booknow {
+
+  background-color: #2A614F;
+  color : white;
+}
+#searchbar {
+  display: flex;
+  align-items: right; 
+  border: 1px solid #ccc;
+  color: #2A614F;
+  background-color: white;
+  border-radius: 20px; /* Fully rounded corners */
+  width: 400px;
+  height: 45px;
+}
+
+#travelSearch {
+    color:#2A614F;
+    background-image: url('./images/search.png');
+    background-position: 150px center;
+    background-repeat: no-repeat;
+    background-size: 10px;
+    padding-left: 5px; 
+    border: none;
+}
+
+input::placeholder {
+  color: #2A614F; /* Your desired hex color */
+  opacity: 1;      /* Ensures consistent color in Firefox */
+  font-size: smaller;
+}
+
+#btnSearch {
+ background-color: #2A614F;
+}
+
+#Reset{
+     background-color: #2A614F;
+}
+#aboutus {
+  color: #002121; 
+  border-color: red;
+  border-width: 5px;
+  margin-top: 200px;
+  margin-left: 450px;
+  width :800px;
+  height: auto;
+  position: absolute;
+  top:0;
+    border-color: red;
+    border-style: solid;  
+}
+
+#ourTeam{
+  display: flex;
+  gap:50px;
+  background-color: transparent;
+  margin-top: 100px;
+  margin-left: 450px;  
+  width :800px;  
+  height: auto;
+  position: absolute;  
+    border-color: red;
+    border-style: solid;  
+}
+
+#otheading {
+  color:white;
+  background-color: transparent;
+  font-size: 52px;
+  width:100px;
+}
+
+#oteam {
+   font-family: Arial, sans-serif;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);  
+    grid-gap: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    color:white;
+    background-color: transparent;
+    background-image: none;
+    font-size: 10px;
+}
+
+.label {
+    position: sticky; /* Makes the element stick when its scroll position reaches a defined threshold */
+    /* Optional: styling for visibility */
+    background-color: #16417C;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 5px;
+    font-size: 10px;
+    font-weight: bold;
+}
+    #contactForm {  
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    #contactForm input,
+    #contactForm textarea {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 8px;
+      background-color: transparent;
+      border-style:solid; 
+      border-color: grey;
+      border-width: 1px;      
+    }
+       #contactForm button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    #contactForm label{
+      color:white;
+    }
+    #contactForm button:hover {
+      background-color: #0056b3;
+    }    
+    #contactheading {
+   font-family: Arial, sans-serif;
+   font-size: 52px;  
+  color:white;
+  align-items: center;
+}
+#contactus {
+  top:200px;
+  position: absolute;
+  margin-left: 450px;    
+  margin-top: 0px;
+  display: flex;
+  gap:50px;
+  background-color: transparent;  
+}
+
+[popover]:popover-open {
+  width: 300px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  /* By default, it centers; use margin to position */
+  margin-top: 50px; 
+  z-index: 1000;
+}
