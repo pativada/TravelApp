@@ -8,16 +8,19 @@ nav {
     background-color: currentColor;
     padding: 5px;
     display: flex;
-    align-items: center;
+        align-items: center;    
     justify-content: space-between;
   }
   nav ul {
     list-style-type: none;
+    align-items: center;    
     /* padding: 0; */
   }
+
   nav ul li {
     display:inline-flex;
     margin-right: 10px;
+    align-items: center;    
   }
   nav a {
     text-decoration: none;
@@ -116,7 +119,7 @@ input::placeholder {
      background-color: #2A614F;
 }
 #aboutus {
-  color: #002121; 
+  color: white; 
   border-color: red;
   border-width: 5px;
   margin-top: 200px;
@@ -186,6 +189,7 @@ input::placeholder {
       border-style:solid; 
       border-color: grey;
       border-width: 1px;      
+      color:white;
     }
        #contactForm button {
       padding: 10px 20px;
@@ -223,4 +227,7 @@ input::placeholder {
   /* By default, it centers; use margin to position */
   margin-top: 50px; 
   z-index: 1000;
+}
+#targets{
+  align-items: center;
 }

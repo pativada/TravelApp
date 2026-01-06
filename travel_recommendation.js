@@ -5,6 +5,7 @@ let gcities = []
 let gcountries = []
 const popover = document.getElementById('search-results');  
 const results = document.getElementById('results-list');
+    trsearch = document.getElementById('travelSearch');
 let travelAPI = () => {
             fetch('./travel_recommendation_api.json')
             .then(response => response.json())
@@ -14,7 +15,6 @@ let travelAPI = () => {
             let { beaches } = data 
             let { temples } = data 
             let { countries } = data
-
             for( i = 0; countries.length > i; i++ ){
                 for( j = 0; countries[i].cities.length > j; j++ ){
                 travel.push({
@@ -26,6 +26,12 @@ let travelAPI = () => {
             }
             travelSearch = document.getElementById('travelSearch').value.trim()
             cities = travel.filter(tr => tr.name.includes(travelSearch));      
+
+            if (cities.length === 0){
+                travelsrc = travelSearch.charAt(0).toUpperCase() + travelSearch.slice(1)
+                citi = travel.filter(tr => tr.name.includes( travelsrc ))
+                cities.push(...citi)
+            }
 
             gbeaches = beaches
             gtemples = temples
@@ -50,13 +56,33 @@ function thankyou(){
         }
     }
 
+    trsearch.addEventListener('keydown', function(event) {    
+  // Check if the key pressed is the 'Enter' key
+  if (event.key === 'Enter') {
+
+    // Prevent the default action (e.g., form submission and page refresh)
+    event.preventDefault();
+    // Trigger the button's click event programmatically
+    document.getElementById('btnSearch').click();
+  }
+})
+
     document.getElementById('btnSearch').addEventListener('click',(e)=>{
       try {
+                    travel=[]
+            e.preventDefault(); // Stop form submission
+            e.stopPropagation();
             travelAPI();
+            const rect = trsearch.getBoundingClientRect();
             results.innerHTML = "";
             popover.style.display = "block"
-            popover.style.top = ( e.pageY - 5) + "px"
-            popover.style.left = (e.pageX - 200) + "px"
+//             if (e.key === 'Enter') {
+            popover.style.top = ( rect.top - 200 ) + "px"
+            popover.style.left = (rect.left  ) + "px"
+//             } else {
+//            popover.style.top = ( e.pageY - 200 ) + "px"
+//            popover.style.left = (e.pageX - 200 ) + "px"                
+//             }
             popover.style.width = "300px"
             popover.style.height = "400px"
             //popover.textContent = "Loading…" // temporary state
@@ -114,18 +140,20 @@ function thankyou(){
                     <textarea id="message-${i}" name="message-${i}" rows="5" readonly>${city.description}</textarea>`                       
                     results.appendChild(li);                            
                     }
+                break;
             }
             if(!popover){
-                popover.showPopover(); 
+            setTimeout(() => {
+                popover.showPopover();
+            }, 2000);                
             }
 
       } catch(error) {
-        popover.textContent = "Error loading details"; 
-         popover.showPopover(); 
+        alert("Error: "+error);
       }
     })
 
-    document.getElementById('Reset').addEventListener('click', () => {
+    document.getElementById('Reset').addEventListener('click', (e) => {
         travel  = []
         gbeaches = []
         gtemples = []
@@ -133,5 +161,15 @@ function thankyou(){
         gcountries = []
         results.innerHTML = "";
         popover.hidePopover();
-
+        e.stopPropagation();
     })
+/*
+    document.getElementById('travelSearch').addEventListener('change', (e) => {
+    if(!popover){
+    setTimeout(() => {
+        popover.showPopover();
+         e.stopPropagation();
+    }, 2000);                
+    }        
+    })
+*/
