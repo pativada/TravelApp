@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TravelBloom</title>
+    <link rel="icon" href="./images/plane.png" type="image/png">
+  <link rel="stylesheet" href="./travel_recommendation.css">
+</head>
+<body>  
+    <nav>
+        <h1 id="tbloom"><img src="./images/plane2.png" width="40px" height="40px"> Travel Bloom </h1>
+        <ul>
+          <li><a href="./travel_recommendation.html" id="home">Home </a></li>
+          <li><a href="./about.html" id="home">About us </a></li>
+          <li><a href="./contact.html" id="contact">Contact Us </a></li>
+        </ul>
+        <div id="searchbar">
+            <ul>
+                <li><input type="text" id="travelSearch" placeholder="Travel Recommendations" >  </li>
+                <li><button id='btnSearch' >Search</button></li>
+                <li><button id='Reset' >Reset</button></li>
+                
+            </ul>
+        </div>
+      </nav>    
+        <h1 id="explore">Explore </h1>
+            <h1 id="dream">Dream</h1>     
+                <h1 id="dest">Destingation</h1>      
+        <div id="socialmed-icons">
+            <a href="https://www.facebook.com" class="social-icon facebook" aria-label="Facebook">
+            <img src="./images/facebook.jpg" alt="Facebook Icon" width="30px" height="30px">   </a>
+            <a href="https://www.twitter.com" class="social-icon twitter" aria-label="Twitter">
+            <img src="./images/twitter.png" alt="Facebook Icon" width="30px" height="30px">   </a>        
+            <a href="https://www.instagram.com" class="social-icon Instagram" aria-label="Instagram">
+            <img src="./images/instagram.png" alt="Instagram Icon" width="30px" height="30px">   </a>    
+            <a href="https://www.whatsapp.com" class="social-icon whatsapp" aria-label="whatsapp">
+            <img src="./images/whatsapp.jpg" alt="whatsapp Icon" width="30px" height="30px">   </a>                              
+        </div>  
+        <div id="terr">
+          <P>It encourages exploration of unfamiliar territorries, embracing diverse cultures and landscapes, whilte 
+          pursuing the desired destintion that captivated the heart and ignites a sense of wonder.</P>
+        <button id="booknow" type="submit" onclick="">Book Now</button>          
+        </div>
+
+        <div id="search-results" popover>
+          <h3>Results</h3>
+          <ul id="results-list">
+          </ul>
+        </div>
+    <script src="./travel_recommendation.js"></script>
+</body>
+</html>    
