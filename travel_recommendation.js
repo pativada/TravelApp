@@ -69,7 +69,6 @@ function thankyou(){
 
     document.getElementById('btnSearch').addEventListener('click',(e)=>{
       try {
-                    travel=[]
             e.preventDefault(); // Stop form submission
             e.stopPropagation();
             travelAPI();
@@ -157,7 +156,7 @@ function thankyou(){
                 popover.showPopover();
             }, 2000);                
             }
-
+                    travel=[]
       } catch(error) {
         alert("Error: "+error);
       }
@@ -183,4 +182,5 @@ function thankyou(){
     }        
     })
 */
+
 
