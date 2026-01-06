@@ -130,7 +130,17 @@ function thankyou(){
                     <textarea id="message-${i}" name="message-${i}" rows="5" readonly>${temple.description}</textarea>`                   
                     results.appendChild(li);                    
                 }     
-                break;                         
+                break;     
+             case 'country' || 'countries':
+                      i=0;
+                    for(const city of travel){
+                    const li = document.createElement("li");
+                    li.innerHTML = `<label for="label-${i}">${city.name}</label>      
+                    <img src="${city.imageUrl}" alt="${city.name}" width="200px" height="200px">
+                    <textarea id="message-${i}" name="message-${i}" rows="5" readonly>${city.description}</textarea>`                       
+                    results.appendChild(li);                            
+                    }             
+                break;                              
                 default:
                     i=0;
                     for(const city of gcities){
@@ -173,3 +183,4 @@ function thankyou(){
     }        
     })
 */
+
